@@ -2,6 +2,8 @@ const quote = document.querySelector("blockquote")
 const author = document.querySelector(".author-name")
 const newQuote = document.querySelector("#newQuote")
 const tweet = document.querySelector("#tweet")
+
+
 async function addNewQuote() {
     quote.innerText = "Loading..."
     author.innerText = "Loading..."
@@ -12,9 +14,12 @@ async function addNewQuote() {
     author.innerText = response.author
 }
 
+
 newQuote.addEventListener("click", addNewQuote)
 tweet.addEventListener("click", () => {
     window.open(`https://twitter.com/intent/tweet?text=${quote.innerText}  - ${author.innerText}`, "_blank")
 })
 
+
 addNewQuote()
+// vansh4117v
