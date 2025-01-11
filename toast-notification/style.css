@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f7edff;
+}
+
+.buttons{
+    margin: 50px;
+}
+
+.buttons button{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    outline: none;
+    width: 120px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.toast-box{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.toast{
+    width: 400px;
+    height: 80px;
+    background-color: #fff;
+    font-weight: 500;
+    margin: 15px 0;
+    box-shadow: 0 0 20px rgb(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    transform: translateX(100%);
+    animation: appear 0.5s linear forwards;
+}
+
+@keyframes appear {
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.toast i{
+    margin: 0 20px;
+    font-size: 35px;
+    color: green;
+}
+
+.toast::after{
+    content:'';
+    height: 4px;
+    background-color: green;
+    animation: bar 6s linear ;
+    position: absolute;
+    bottom:0;
+    left:0; 
+}
+
+.Error i{
+    color: red;
+}
+
+.Error::after{
+    background-color: red;
+}
+
+.Invalid i{
+    color: orange;
+}
+
+.Invalid::after{
+    background-color: orange;
+}
+
+@keyframes bar {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}
+
+/* vansh4117v */
