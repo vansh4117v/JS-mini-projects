@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Genrator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #262a30;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 400px;
+            border-radius: 8px;
+            padding: 20px 25px;
+            background-color: #fff;
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 8px;
+            outline: none;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        img {
+            margin: 0 auto;
+            height: 0;
+            display: none;
+            transition: 0.3s ease;
+        }
+
+        img.show {
+            display: block;
+            height: 150px;
+        }
+
+        button {
+            margin: 0 auto 10px;
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4c59f6;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Enter text or URL</h3>
+        <input type="text" placeholder="Enter text or URL" id="text">
+        <img src="" alt="Something went wrong">
+        <button>Generate QR Code</button>
+    </div>
+
+    <script>
+        const textInput = document.getElementById('text');
+        const button = document.querySelector("button")
+        const img = document.querySelector("img")
+        button.addEventListener("click", () => {
+            if (textInput.value) {
+                img.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${textInput.value}`
+                img.classList.add("show");
+                textInput.value = ""
+            }
+        })
+    </script>
+</body>
+
+</html>
+
+<!-- vansh4117v -->
