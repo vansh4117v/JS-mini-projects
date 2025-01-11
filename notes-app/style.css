@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(135deg, #cf9aff, #95c0ff);
+    padding: 70px 0 0 70px;
+}
+
+h1{
+    color: white;
+    font-weight: bolder;
+    display: flex;
+    gap:8px;
+    align-items: center;
+}
+
+h1 img{
+    height: 40px;
+}
+
+button{
+    background: linear-gradient(#9415fd,#571094);
+    color: white;
+    padding: 12px 17px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap:5px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button img{
+    height: 18px;
+}
+
+.notes-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+}
+
+.notes{
+    position: relative;
+    width: 450px;
+}
+.note{
+    height: 200px;
+    border: none;
+    padding: 15px;
+    outline: none;
+    width: 450px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 7px;
+}
+
+.notes img{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* vansh4117v */
