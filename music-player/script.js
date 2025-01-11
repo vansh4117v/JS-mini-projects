@@ -25,7 +25,6 @@ function playPause() {
         song.play()
         if (!id) {
             id = setInterval(() => {
-                console.log(song.currentTime)
                 progress.value = song.currentTime
             }, 500)
         }
@@ -39,13 +38,11 @@ progress.addEventListener("change", () => {
 })
 
 backward.addEventListener("click", () => {
-    console.log("backward")
     song.currentTime -= 10;
     progress.value = song.currentTime
 })
 
 forward.addEventListener("click", () => {
-    console.log("forward")
     song.currentTime += 10;
     progress.value = song.currentTime
 })
