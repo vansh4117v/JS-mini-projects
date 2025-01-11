@@ -95,6 +95,7 @@ input:focus{
 #output{
     width: 85%;
     white-space: normal;
+    word-wrap: break-word;
 }
 
 button{

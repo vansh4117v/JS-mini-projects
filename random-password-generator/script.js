@@ -5,7 +5,6 @@ const copy = document.getElementById("copy")
 const characters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+"
 
 function generatePassword() {
-    console.log("here")
     const passwordLength = length.value;
     if (!passwordLength) {
         output.innerText = "Please Enter the length of the password";
