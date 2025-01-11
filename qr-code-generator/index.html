@@ -74,13 +74,18 @@
         const textInput = document.getElementById('text');
         const button = document.querySelector("button")
         const img = document.querySelector("img")
-        button.addEventListener("click", () => {
+        function generateQRCode() {
             if (textInput.value) {
                 img.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${textInput.value}`
                 img.classList.add("show");
                 textInput.value = ""
             }
+        }
+        button.addEventListener("click", generateQRCode);
+        document.addEventListener("keydown", (e) => {
+            if (e.code === "Enter") generateQRCode()
         })
+
     </script>
 </body>
 
